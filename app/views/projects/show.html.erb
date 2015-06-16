@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @project.name %>
-</p>
+</h1>
 
 <p>
   <strong>Ends at:</strong>
   <%= @project.ends_at %>
 </p>
+
+<h2>Tasks for this project</h2>
+
+<ul>
+  <% @project.tasks.each do |task| %>
+  <li>
+    <%= check_box_tag "task_done_#{task.id}", "", task.done %>
+    <%= link_to task.title, task %>
+  </li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

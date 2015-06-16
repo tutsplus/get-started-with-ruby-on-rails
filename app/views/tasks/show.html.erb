@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= check_box_tag :task_done, "", @task.done %>
+  <%= @task.title %>
+</h1>
+
+<p>
+  <strong>Project:</strong>
+  <%= link_to @task.project.name, @task.project %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
