@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="container">
+    <%= image_tag asset_path("office-2.jpg"), width: 120 %>
+    <%= yield %>
+  </div>
 </body>
 </html>
