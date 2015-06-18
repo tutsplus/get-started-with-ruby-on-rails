@@ -27,3 +27,12 @@
 <br>
 
 <%= link_to 'New Project', new_project_path %>
+
+<% content_for(:sidebar) do %>
+<h3>All projects</h3>
+<ol>
+  <% Project.all.each do |project| %>
+  <li><%= project.name %></li>
+  <% end %>
+</ol>
+<% end %>

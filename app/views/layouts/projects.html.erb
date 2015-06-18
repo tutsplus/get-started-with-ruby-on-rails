@@ -8,7 +8,14 @@
 </head>
 <body>
   <div id="container">
-    <%= yield %>
+    <div id="container-projects">
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <h2>Sidebar</h2>
+
+      <%= yield(:sidebar) %>
+    </div>
   </div>
 </body>
 </html>
