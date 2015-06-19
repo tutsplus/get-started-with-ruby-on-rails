@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   resources :tasks do
     resources :comments, only: [:create]
+    member do
+      patch :toggle #/tasks/1/toggle | toggle_task_path
+    end
   end
   resources :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'projects#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
