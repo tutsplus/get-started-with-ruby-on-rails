@@ -18,7 +18,7 @@
 <ol>
   <% @task.comments.each do |comment| %>
   <li>
-    <h3><%= comment.name %></h3>
+    <h3><%= comment.name %> <small><%= comment.email %></small> </h3>
     <blockquote><%= comment.body %></blockquote>
   </li>
   <% end %>

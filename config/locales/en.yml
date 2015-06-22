@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  default_mailer:
+    confirm_task:
+      subject: Task updated
