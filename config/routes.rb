@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  resources :tasks do
-    resources :comments, only: [:create]
-    member do
-      patch :toggle #/tasks/1/toggle | toggle_task_path
+  scope "/:locale" do
+    resources :tasks do
+      resources :comments, only: [:create]
+      member do
+        patch :toggle #/tasks/1/toggle | toggle_task_path
+      end
     end
+    resources :projects
   end
-  resources :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

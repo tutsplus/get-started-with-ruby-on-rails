@@ -24,3 +24,8 @@ en:
   default_mailer:
     confirm_task:
       subject: Task updated
+
+  projects:
+    name: Name
+    description: Description
+    ends_at: Ends at

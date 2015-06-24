@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, t("projects.name") %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, t("projects.description") %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :ends_at %><br>
+    <%= f.label :ends_at, t("projects.ends_at") %><br>
     <%= f.date_select :ends_at %>
   </div>
   <div class="actions">
